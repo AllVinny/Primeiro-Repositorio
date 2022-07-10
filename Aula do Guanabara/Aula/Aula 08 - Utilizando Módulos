@@ -1,0 +1,23 @@
+#Os programas em python por padrão tem uma biblioteca limitada, então algumas 
+#funcionalidades e recursos precisam ser baixados separados
+
+#Bibliotecas aumentam os comandos
+
+#para incluir alguma biblioteca usamos o comando "import 'modulo'" para baixar os modulos inteiros 
+#para importar partes especificas, usamos 'from modulo import item'. Isso deixa o programa mais leve.
+
+#exemplo: biblioteca math (matematica)
+#import math, vai importar arredondamento, raiz quadrada etc. Se vc precisar só de uma operação
+#vc pode importar from math import sqrt.
+#se precisar importar raiz quadrada e arredondar pra cima
+# from math import sqrt, ceil
+import math
+num = int(input('Digite um número: '))
+#Agora se a gente quiser calcular a raiz quadrada desse número, a gente volta pro inicio do código
+#e importa a biblioteca math
+raiz = math.sqrt(num)
+print(f'A raiz de {num} é igual a {raiz}') #Se quiser arredondar pra cima, colocamos {math.ceil(raiz)}
+
+#se eu colocasse na linha 14 "from math import sqrt", eu não conseguiria usar o math.ceil
+#Se eu importar apenas um comando, n preciso colocar sua biblioteca. Assim a linha 18 vira
+#raiz = sqrt(num)
