@@ -10,11 +10,12 @@ num1 = int(input('Digite o primeiro númmero: '))
 num2 = int(input('Digite o segundo número: '))
 
 if num1 > num2:
-    print(f'O primeiro número é maior! {num1} é maior que {num2}!')
+    print(f'O PRIMEIRO número é maior! {num1} é maior que {num2}!')
 
 elif num2 > num1:
-    print(f'O segundo número é maior! {num2} é maior que {num1}!')
+    print(f'O SEGUNDO número é maior! {num2} é maior que {num1}!')
 
 else:
-    print('Nenhum dos números é maior, os dois são iguais.')
+    print('Nenhum dos números é maior, os dois são IGUAIS.')
 
+print('\033[7m--------------FIM--------------\033[m')

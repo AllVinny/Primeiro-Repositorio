@@ -4,24 +4,31 @@
 #Até 9 anos: Mirim
 #Até 14 anos: Infantil
 #até 19 anos: Junior
-#até 20 anos: Senior
-#20+: Master
+#até 25 anos: Senior
+#25+: Master
+
+from datetime import date
+atual = date.today().year
 
 print('\033[7m--------------CLASSIFICAÇÃO DE ATLETAS--------------\033[m')
 print('Vamos descobrir em qual categoria seu atleta vai competir!')
 
-idade = int(input('Qual a idade do atleta? '))
+nasc = int(input('Qual o ano de nascimento do atleta? '))
+idade = atual-nasc
 
 if idade <= 9:
     print(f'Atletas de {idade} anos, competem na categoria MIRIM! ')
 
-elif idade < 14:
+elif idade <= 14:
     print(f'Atletas de {idade} anos competem na categoria INFANTIL! ')
 
 elif idade <= 19:
     print(f'Atletas de {idade} anos competem na categoria JUNIOR! ')
 
-elif idade >= 20:
+elif idade <= 25:
+    print(f'Atletas de {idade} anos competem na categoria  SENIOR! ')
+
+elif idade > 25: 
     print(f'Atletas de {idade} anos ou mais competem na categoria MASTER! ')
 
 

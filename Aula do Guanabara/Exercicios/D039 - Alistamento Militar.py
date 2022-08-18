@@ -6,22 +6,27 @@
 
 #Seu programa tambem deverá mostrar o tempo que falta ou o tempo que passou do prazo.
 
+from datetime import date
+atual = date.today().year
+
 print('\033[7m--------------ALISTAMENTO MILITAR--------------\033[m')
 print('Vamos ver como está seu alistamento?')
+
+
 nasc = int(input('Insira o ano que você nasceu: Ex: 1996. '))
 
-idade = 2022-nasc
+idade = atual-nasc
 
 if idade < 18:
     dif = 18-idade
-    print(f'Você tem {idade} anos, ainda faltam {dif} para o seu alistamento. ')
+    print(f'Você tem {idade} anos, seu alistamento será apenas em {nasc+18}, daqui {dif} anos! ')
 
 elif idade == 18:
-    print(f'Fique atento, você precisa se alistar até o final desse ano. ')
+    print(f'Fique atento, você precisa se alistar IMEDIATAMENTE. ')
 
 else:
     dif = idade-18
-    print(f'Atenção, seu alistamento deveria ter acontecido a {dif} anos. Regularize sua situação! ')
+    print(f'Atenção, seu alistamento deveria ter acontecido a {dif} anos, em {atual-dif}. Regularize sua situação! ')
 
 
 print('\033[7m--------------FIM--------------\033[m')

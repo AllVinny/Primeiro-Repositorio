@@ -15,16 +15,16 @@ imc = p/(a**2)
 if imc < 18.5:
     print(f'Seu IMC é {imc:,.2f}, você está abaixo do peso ideal! ')
 
-elif imc >=18.5 and imc <= 25:
+elif imc >=18.5 and imc < 25:
     print(f'Seu IMC é {imc:,.2f}, você está no seu peso ideal! ')
 
-elif imc > 25 and imc <= 30:
+elif imc >= 25 and imc < 30:
     print(f'Seu IMC é {imc:,.2f}, você está com sobrepeso! ')
 
-elif imc > 30 and imc <= 40:
+elif imc >= 30 and imc < 40:
     print(f'CUIDADO!!! Seu IMC é {imc:,.2f}, você está obeso!')
 
-elif imc > 40:
+elif imc >= 40:
     print(f'CUIDADO!!! Seu IMC é {imc:,.2f}, você está com obesidade morbida!')
 
 print('\033[7m--------------FIM--------------\033[m')
