@@ -5,6 +5,20 @@
 #em até 2x no cartão: preço normal
 #3x ou mais no cartão: 20% de juros.
 
+#Na correção do exercicio, as formas de pagamento foram passadas antes
+#Preço das compras: xxxx
+#[1] A vista dinheiro/cheque
+#[2] A vista cartão
+#[3] 2x no cartão
+#[4] 3x ou mais no cartão - Quantas parcelas? xx. {calculo}
+
+#Sua compra será parcelada em xxx de {valor da parcela} COM JUROS (ou sem juros).
+#Sua compra de xxxx vai custar xxxx(com juros).
+
+#Dessa forma o programa fica mais intuitivo, mas reduz a possibilidade de parcelamento.
+
+#Tentar fazer um meio termo, como 44b.
+
 print('\033[7m--------------GERENCIADOR DE PAGAMENTOS--------------\033[m')
 print('Insira o valor do produto, e depois qual o seu metodo de pagamento! ')
 
@@ -30,3 +44,6 @@ else:
     print(f'Não reconheci a forma de pagamento \033[7m"{metodo}"\033[m, só aceitamos Dinheiro, Cheque ou Cartão, reinicie o programa!!!')
 
 print('\033[7m--------------FIM--------------\033[m')
+
+
+
