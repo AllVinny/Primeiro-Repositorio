@@ -2,6 +2,8 @@
 import random
 import time
 
+#alteração simples
+
 print('\033[7m--------------PEDRA, PAPEL, TESOURA--------------\033[m')
 print('Vamos jogar Pedra, Papel ou Tesoura?!')
 time.sleep(0.5)
