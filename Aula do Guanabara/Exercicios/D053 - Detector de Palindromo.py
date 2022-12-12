@@ -1,0 +1,1 @@
+#Crie um programa que leia uma frase qualquer e diga se ela é um palindromo, desconsiderando os espaços. (Pode ler de frente pra tras ou invertido que da a mesma frase).
