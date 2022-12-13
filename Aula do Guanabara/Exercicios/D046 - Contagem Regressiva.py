@@ -4,7 +4,7 @@ import emoji
 from time import sleep
 
 
-for contagem in range(11,1,-1):
+for contagem in range(11,0,-1):
     print(contagem-1)
     sleep(1)
-print(emoji.emojize(':sparkler::fireworks: FELIZ ANO NOVO!!! :fireworks::sparkler:'))
+print(emoji.emojize(':sparkler::fireworks: <FOGOS DE ARTIFICIO EXPLODINDO> :fireworks::sparkler:'))
