@@ -13,18 +13,21 @@ print('FIM')
 pt = int(input('Primeiro termo da PA: '))
 rp = int(input('Razão da PA: '))
 dt = pt + (10 - 1) * rp
-
-while pt < dt+1:
-    print(pt, end=' -> ')
-    pt += rp
-t = int(input('\nQuantos termos a mais você quer mostrar? '))
-if t != 0:
-    dt = pt + (t - 1) * rp
-    print(pt, end=' -> ')
-    while pt < dt + 1:
+encerrar = False
+r = 0
+print(pt, end = ' -> ')
+while encerrar == False:
+    while pt < (dt):
         pt += rp
-        print(pt, end=' -> ')
-    t = int(input('\nQuantos termos a mais você quer mostrar? '))
-else:
-    print('Encerrando...')
+        print(pt, end = ' -> ')
+    t = int(input('\nQuantos termos mais você quer mostrar? '))
+    if t != 0:
+        while pt < dt + ( (t+r) * rp ):
+            pt += rp
+            print(pt, end=' -> ')
+        encerrar = False
+        r += t
+    else:
+        encerrar = True
+print('Encerrando...')
 
