@@ -9,7 +9,9 @@ while atual < dt+1:
     atual += rp
 print('FIM')
 '''
+
 #Mudar programa para perguntar se quer continuar com um buleano, assim consigo ficar em apenas um while
+'''
 pt = int(input('Primeiro termo da PA: '))
 rp = int(input('Razão da PA: '))
 dt = pt + (10 - 1) * rp
@@ -31,3 +33,19 @@ while encerrar == False:
         encerrar = True
 print('Encerrando...')
 
+'''
+
+#teste2
+cont = 0
+pt = int(input('Primeiro termo da PA: '))
+rp = int(input('Razão da PA: '))
+parada = 10
+
+while cont < parada:
+    print(pt, end=' -> ')
+    pt += rp
+    cont += 1
+    if cont == parada:
+        rp2 = int(input('\nQuantos temos mais você quer mostrar? '))
+        parada += rp2
+print('FIM')
