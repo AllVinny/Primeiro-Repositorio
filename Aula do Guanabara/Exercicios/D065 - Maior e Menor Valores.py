@@ -2,29 +2,32 @@
 # mostre a média entre todos os valores e qual foi o maior e o menor valor lido.
 # O programa deve perguntar ao usuário se ele quer ou não continuar a digitar valores.
 
-n = 0
-cont = 0
-continuar = True
-conti = "S"
 soma = 0
-maior = 0
-menor = 0
+cont = 1
+n = int(input('Qual o primeiro número? '))
+maior = n
+menor = n
+soma += n
+print('Deseja continuar? ')
+continuar = str(input('S/N '))
 
-while continuar == True:
-    n = int(input('Qual o seu número? '))
-    if n > maior:
-        maior = n
-    elif n < menor:
-        menor = n
-    soma += n
-    cont += 1
-    conti = str(input('Deseja continuar? S/N '))
-    if conti == 'S' or 's':
-        continuar = True
-    if conti == 'N' or 'n':
-        continuar = False
-media = soma/cont
-print(f'Você digitou {cont} valores; ')
-print(f'O maior valor foi {maior}; ')
-print(f'O menor valor foi {menor};')
-print(f'A média dos números inseridos é {media}')
+if continuar == 's':
+    while continuar == 's':
+        n = int(input('Qual o proximo número? '))
+        soma += n
+        cont += 1
+        if n > maior:
+            maior = n
+        elif n < menor:
+            menor = n
+        continuar = str(input('Deseja continuar? '))
+    if continuar == 'n':
+        media = soma/cont
+        print(f'Você inseriu {cont} números;')
+        print(f'O maior número foi {maior};')
+        print(f'O menor número foi {menor};')
+        print(f'A média entre os números foi {media}.')
+else:
+    print(f'Você digitou apenas o número {n}! ')
+
+print('FIM')
