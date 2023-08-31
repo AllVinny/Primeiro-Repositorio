@@ -2,12 +2,11 @@
 import random
 c = 0
 while True:
-    pc = random.randint(0,10)
+    pc = random.randint(0, 10)
     user_number = int(input('Escolha um valor: '))
     user_choice = str(input('Par ou Impar? [P/I] ')).strip().capitalize()
-    if user_choice not in ['p', 'P', 'I', 'i']:
-        print(f'Você digitou {user_choice}, escolha Par ou Impar [P/I]! ')
-        continue
+    while user_choice not in ['P', 'I']:
+        print(f'Você digitou {user_choice}, escolha Par ou Impar [P/I]! ').strip().capitalize()
     s = pc + user_number
     if s % 2 == 0:
         r1 = 'P'
@@ -21,7 +20,6 @@ while True:
         print('Você VENCEU! ')
         print('Vamos jogar novamente... ')
         c += 1
-
 
     else:
         print(f'Você jogou {user_number} e o computador {pc}. Total de {s}, DEU {r2}')

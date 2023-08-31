@@ -7,9 +7,9 @@ test = True
 while test == True:
     print('CADASTRE UMA PESSOA! ')
     age = int(input('Idade: '))
-    sex = str(input('Sexo: [M/F] ')).strip().capitalize()
+    sex = str(input('Sexo: [M/F] ')).strip().capitalize()[0]
     while sex not in ['M', 'F']:
-        sex = str(input('Sexo: [M/F] ')).strip().capitalize()
+        sex = str(input('Sexo: [M/F] ')).strip().capitalize()[0]
 
     if age > 18:
         count18 += 1
@@ -20,7 +20,7 @@ while test == True:
     if sex == 'F' and age < 20:
         countm20 += 1
 
-    cont = str(input('Deseja continuar? [S/N] ')).strip().capitalize()
+    cont = str(input('Deseja continuar? [S/N] ')).strip().capitalize()[0]
     while cont not in ['N', 'S']:
         cont = str(input('Deseja continuar? [S/N] ')).strip().capitalize()
     if cont == 'N':
